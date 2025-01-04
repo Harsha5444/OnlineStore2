@@ -1,4 +1,22 @@
-﻿using DataPassingBLL;
+﻿//Directory structure:
+//└── Harsha5444 - OnlineStore2 /
+//    ├── OnlineStore2.sln
+//    ├── DataAccessDAL /
+//    │   ├── App.config
+//    │   ├── DataAccessDAL.cs
+//    ├── DataPassingBLL /
+//    │   ├── App.config
+//    │   ├── DataPassingBLL.cs
+//    │   └── 
+//    └── UI /
+//        ├── App.config
+//        ├── DisplayTable.cs
+//        ├── HomePage.cs
+//        ├── Session.cs
+//        ├── LoginForm.cs
+//        ├── Program.cs
+
+using DataPassingBLL;
 using System;
 using System.Data;
 
