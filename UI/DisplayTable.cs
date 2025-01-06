@@ -9,33 +9,22 @@ namespace UI
         {
             Console.Clear();
             Console.WriteLine($"--- {dataTable.TableName.ToUpper()} ---");
+            Console.WriteLine(new string('-', 77));
             foreach (DataColumn column in dataTable.Columns)
             {
-                if (column.Ordinal < 1)
-                    Console.Write($"{column.ColumnName}".PadRight(10));
-                else
-                    Console.Write($"{column.ColumnName}".PadRight(20));
+                Console.Write(column.ColumnName.PadRight(20));
             }
             Console.WriteLine();
-            foreach (DataColumn column in dataTable.Columns)
-            {
-                if (column.Ordinal < 1)
-                    Console.Write("----------".PadRight(10));
-                else
-                    Console.Write("--------------------".PadRight(20));
-            }
-            Console.WriteLine();
+            Console.WriteLine(new string('-', 77));
             foreach (DataRow row in dataTable.Rows)
             {
-                for (int i = 0; i < dataTable.Columns.Count; i++)
+                foreach (var item in row.ItemArray)
                 {
-                    if (i < 1)
-                        Console.Write($"{row[i]}".PadRight(10));
-                    else
-                        Console.Write($"{row[i]}".PadRight(20));
+                    Console.Write(item.ToString().PadRight(20));
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine(new string('-', 77));
             Console.WriteLine();
         }
     }

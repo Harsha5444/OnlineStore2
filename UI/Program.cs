@@ -43,7 +43,7 @@ namespace UI
                 {
                     if (LoginForm.Login(ds))
                     {
-                        HomePage.Menu(ds,bll);
+                        HomePage.Menu(ds, bll);
                     }
                 }
                 else if (choice == "2")

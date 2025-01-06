@@ -19,7 +19,7 @@ namespace UI
             {
                 if (row["Username"].ToString() == username && row["Password"].ToString() == password)
                 {
-                    Console.Clear() ;
+                    Console.Clear();
                     Console.WriteLine($"Login successful! Welcome, {username}.\n");
                     Session.UserName = username;
                     isAuthenticated = true;

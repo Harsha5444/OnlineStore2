@@ -13,12 +13,13 @@ namespace UI
             {
                 Console.WriteLine("********** Welcome to the Home Page **********");
             start:
+                Console.WriteLine("Please choose an option from the menu below:");
                 Console.WriteLine("1. View Products");
                 Console.WriteLine("2. Add to Cart");
                 Console.WriteLine("3. View Cart");
                 Console.WriteLine("4. Checkout");
                 Console.WriteLine("5. Logout");
-                Console.Write("Please select an option: ");
+                Console.Write("\nSelect an option: ");
                 string choice = Console.ReadLine();
                 switch (choice)
                 {
