@@ -58,6 +58,11 @@ namespace UI
             DataRow productRow = ds.Tables["products"]
                                .AsEnumerable()
                                .FirstOrDefault(row => row.Field<int>("ProductId") == productId);
+
+            //var productRow = (from row in ds.Tables["products"].AsEnumerable()
+            //                      where row.Field<int>("ProductId") == productId
+            //                      select row).FirstOrDefault();
+
             int availableQuantity = (int)productRow["QuantityAvailable"];
             Console.Write($"Enter the quantity of {productRow["ProductName"]}: ");
             int quantity;
