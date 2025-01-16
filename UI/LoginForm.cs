@@ -1,6 +1,7 @@
 ﻿using DataPassingBLL;
 using System;
 using System.Data;
+using System.Linq;
 
 namespace UI
 {
@@ -40,6 +41,15 @@ namespace UI
             string fullName = Console.ReadLine();
             Console.Write("Enter Username: ");
             string username = Console.ReadLine();
+            DataRow existingUser = ds.Tables["users"].AsEnumerable()
+                                                .FirstOrDefault(row => row.Field<string>("Username") == username);
+            if (existingUser != null)
+            {
+                Console.WriteLine("User already exists. Please try a different username.");
+                Console.WriteLine("\nPress any key to return to the Login Page...");
+                Console.ReadKey();
+                return; 
+            }
             Console.Write("Enter Password: ");
             string password = Console.ReadLine();
             Console.Write("Enter Mobile Number: ");
