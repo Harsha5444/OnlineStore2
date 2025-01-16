@@ -50,6 +50,12 @@ namespace UI
                 Console.ReadKey();
                 return; 
             }
+            //DataRow[] existingUsers = ds.Tables["users"].Select($"Username = '{username}'");
+
+            //if (existingUsers.Length > 0)
+            //{
+            //    Console.WriteLine("User already exists. Please try a different username.");
+            //}
             Console.Write("Enter Password: ");
             string password = Console.ReadLine();
             Console.Write("Enter Mobile Number: ");
